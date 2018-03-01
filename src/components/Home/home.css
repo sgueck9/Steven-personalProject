@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700');
+
+.body2{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('http://doublegsports.com/wp-content/uploads/2016/06/Muhammad-Ali-Best-Fights-Top-10-Rules-For-Success-Evan-Carmichael-Entrepello.jpg');
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: 'Playfair Display', serif;
+    grid-row-gap: 0;
+    grid-template-rows: 65px 65px 230px 100px;
+
+}
+.logButt {
+    border: none;
+    text-align: center;
+    font-size: 40px;
+    color:rgba(252, 245, 237, 0.904);
+    margin-left: 33%;
+    background: none;
+    cursor: alias;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 6px 6px 4px black;
+    box-shadow: none;
+}
+.logButt:hover{
+    background: none;
+
+}
+.logButt:active{
+    background: none;
+    box-shadow: none;
+    transform: none;
+}
+
+.title {
+    font-size: 60px;
+    color: rgba(252, 245, 237, 0.904);
+    height: 5px;
+    margin-left: 3%;
+    margin-top: 2%;
+    text-shadow: 6px 6px 4px black;
+}
+.title2 {
+    font-size: 60px;
+    color: rgba(252, 245, 237, 0.904);
+    height: 5px;
+    margin-left: 8%;
+    margin-top: 2.5%;
+    text-shadow: 6px 6px 4px black;
+
+}
+.title3 {
+    font-size: 60px;
+    color: rgba(252, 245, 237, 0.904);
+    height: 5px;
+    margin-left: 13.5%; 
+    margin-top: 3%;
+    text-shadow: 6px 6px 4px black;
+}
+.instruct {
+    font-size: 14px;
+    color: rgba(252, 245, 237, 0.904);
+    height: 5px;
+    margin-left: 1.5%; 
+    margin-top: 9%;
+}
