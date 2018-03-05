@@ -100,9 +100,9 @@ axios.put(`/api/cartquantity/${quantity}/${cart_id}`).then(response=>{
                 <div className='background2Cart'>
                     <div className='subTotal'>
                         <a className='price'>Subtotal : ${this.state.cartTotal}.00</a>
-                        <a href={process.env.REACT_APP_STOREHOME}><button>back to store</button></a>
-                        <a href={process.env.REACT_APP_CHECKOUT}><button>Checkout!</button></a>
-                        <a href={process.env.REACT_APP_LOGOUT}><button>LOGOUT</button></a>
+                        <a href={process.env.REACT_APP_STOREHOME} className='back2store'><button>back to store</button></a>
+                        <a href={process.env.REACT_APP_CHECKOUT} className='cartButtons'><button>Checkout!</button></a>
+                        <a href={process.env.REACT_APP_LOGOUT} className='cartButtons'><button>LOGOUT</button></a>
                     </div>
                     <div className='cartGrid'>
                         {displayCart}  
