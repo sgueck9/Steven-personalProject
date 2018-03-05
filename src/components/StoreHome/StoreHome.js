@@ -5,7 +5,7 @@ import {getUser, selectAllProducts, cartTotal, addToCart} from '../../ducks/user
 import cart from '../../cart.jpg'
 import { ToastContainer, toast } from 'react-toastify';
 // this should work
-
+// more changes
 
 export class StoreHome extends Component{
     
