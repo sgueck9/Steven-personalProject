@@ -23,8 +23,8 @@
     "socket.io": "^2.0.4",
     "stripe": "^5.5.0"
   },
-  "proxy": "http://localhost:3010",
   "main": "server/index.js",
+  "proxy": "http://localhost:3010",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
