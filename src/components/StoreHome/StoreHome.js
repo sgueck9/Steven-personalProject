@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {getUser, selectAllProducts, cartTotal, addToCart} from '../../ducks/users'
 import cart from '../../cart.jpg'
 import { ToastContainer, toast } from 'react-toastify';
-
+// this should work
 
 
 export class StoreHome extends Component{
