@@ -3,6 +3,7 @@ import './storehomegrid.css'
 import {connect} from 'react-redux'
 import {getUser, selectAllProducts, cartTotal, addToCart} from '../../ducks/users'
 import cart from '../../cart.jpg'
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -18,6 +19,7 @@ export class StoreHome extends Component{
 
          this.props.addToCart(prodID)
          this.props.cartTotal()
+         toast.info('Item added to cart!')
         }
          
     render(){
@@ -28,8 +30,10 @@ export class StoreHome extends Component{
         
         return(
             <div className='main'>
+            <ToastContainer autoClose={2500}/>
                 <div className='header'>
                     <div className='userName'><p>Logged in as {userData.nickname}</p></div>
+                    <div className='headTitle'>STEVE'S SPORTS COLLECTIBLES</div>
                     <a href={process.env.REACT_APP_CART} className='cartHolder'>
                         <div className='cartThing'><img src={cart} className='cartIcon' />( {cartValue} )</div>
                     </a>
@@ -39,8 +43,8 @@ export class StoreHome extends Component{
                </div>
                <div className='body'>
                     <div className='background2'>
-                    <div className>
-                    This is the Store Home, thanks for logging in!! :)
+                    <div className='thanks'>
+                    Thanks for logging in! you can now begin shopping
                     </div>
                     <div className='prodGrid'>
                
@@ -51,7 +55,7 @@ export class StoreHome extends Component{
                     </div>
                         <div>
                             <div>
-                            ${(products[1].price)}
+                            Price: ${(products[1].price)}
                             </div>
                             <button className='addToCart'
                                 onClick={e=>{this.addToCart(products[1].id)}}>add to cart
@@ -65,7 +69,7 @@ export class StoreHome extends Component{
                     </div>
                     <div>
                         <div>
-                        ${(products[0].price)}
+                            Price: ${(products[0].price)}
                         </div>
                         <button className='addToCart'
                             onClick={e=>{this.addToCart(products[0].id)}}>add to cart
@@ -76,7 +80,7 @@ export class StoreHome extends Component{
                     <img className='prodPic' src={products[2].img}/>
                     <div>{products[2].product_name}</div>
                     <div>
-                        <div>${products[2].price}
+                        <div>Price: ${products[2].price}
                     </div>
                             <button className='addToCart'
                                 onClick={e=>{this.addToCart(products[2].id)}}>
@@ -88,7 +92,7 @@ export class StoreHome extends Component{
                     <img className='prodPic' src={products[3].img}/>
                     <div>{products[3].product_name}</div>
                     <div>
-                        <div>${products[3].price}
+                        <div>Price: ${products[3].price}
                     </div>
                             <button className='addToCart'
                                 onClick={e=>{this.addToCart(products[3].id)}}>
@@ -100,7 +104,7 @@ export class StoreHome extends Component{
                     <img className='prodPic' src={products[4].img}/>
                     <div>{products[4].product_name}</div>
                     <div>
-                        <div>${products[4].price}
+                        <div>Price: ${products[4].price}
                     </div>
                             <button className='addToCart'
                                 onClick={e=>{this.addToCart(products[4].id)}}>
@@ -112,7 +116,7 @@ export class StoreHome extends Component{
                     <img className='prodPic' src={products[5].img}/>
                     <div>{products[5].product_name}</div>
                     <div>
-                        <div>${products[5].price}
+                        <div>Price: ${products[5].price}
                     </div>
                             <button className='addToCart'
                                 onClick={e=>{this.addToCart(products[5].id)}}>
@@ -124,7 +128,7 @@ export class StoreHome extends Component{
                     <img className='prodPic' src={products[6].img}/>
                     <div>{products[6].product_name}</div>
                     <div>
-                        <div>${products[6].price}
+                        <div>Price: ${products[6].price}
                     </div>
                             <button className='addToCart'
                                 onClick={e=>{this.addToCart(products[6].id)}}>
@@ -136,7 +140,7 @@ export class StoreHome extends Component{
                     <img className='prodPic' src={products[7].img}/>
                     <div>{products[7].product_name}</div>
                     <div>
-                        <div>${products[7].price}
+                        <div>Price: ${products[7].price}
                     </div>
                             <button className='addToCart'
                                 onClick={e=>{this.addToCart(products[7].id)}}>
@@ -148,7 +152,7 @@ export class StoreHome extends Component{
                     <img className='prodPic' src={products[8].img}/>
                     <div>{products[8].product_name}</div>
                     <div>
-                        <div>${products[8].price}
+                        <div>Price: ${products[8].price}
                     </div>
                             <button className='addToCart'
                                 onClick={e=>{this.addToCart(products[8].id)}}>
@@ -156,15 +160,16 @@ export class StoreHome extends Component{
                             </button>
                     </div>
                 </div>
+                <div> 
+                    <a href={process.env.REACT_APP_CART}>
+                        <button className='bottom'>My Cart</button>
+                    </a>              
+                    <a href={process.env.REACT_APP_CHECKOUT}>
+                        <button className='bottom'>Checkout</button>
+                    </a>
+                </div>  
              </div> 
-                        <div> 
-                            <a href={process.env.REACT_APP_CART}>
-                            <button>My Cart</button>
-                            </a> 
-                            <a href={process.env.REACT_APP_CHECKOUT}>
-                            <button>Checkout</button>
-                            </a>
-                         </div>           
+                                 
                     </div>   
                 </div>
             </div>

@@ -30,38 +30,41 @@
 
 button {
   background-color: rgb(97, 97, 97);
-  border: 3px solid  slategray;
+  /* border: 3px solid  slategray; */
   color: white;
   font-size: 16px;
   cursor: pointer;
-
+  border: 0px outset rgb(97, 97, 97);
   padding: 7px 17px;
  
   text-align: center;
-  cursor: pointer;
+  
   outline: none;
-  border: none;
+  /* border: none; */
   border-radius: 15px;
-  box-shadow: 0 6px rgba(99, 147, 196, 0.911);
+  /* box-shadow: 0 8px rgba(99, 147, 196, 0.911); */
+  box-shadow: 0 8px rgb(101, 211, 255);
+  background-image: linear-gradient(rgb(97, 97, 97), rgb(200,200,200))
 
 }
 button:hover {
-  background-color: rgb(55, 55, 55);
+  background-color: rgb(20, 20, 20);
 
 }
 
 button:active{
-  background-color: rgb(55, 55, 55);
+  background-color: rgb(15, 15, 15);
   box-shadow: 0 1px #666;
   transform: translateY(4px);
 
 }
 
 .main {
-  background-color: rgba(84, 127, 170, 0.911);
-  height: 100;
+  background-color: rgb(101, 211, 255);
+  height: 1500px;
   display: grid;
-  position: absolute;
+  /* position: absolute; */
+
 
 }
 .body {

@@ -136,12 +136,21 @@ app.delete('/api/removefromcart/:id', (req, res)=>{
     app.get('db').remove_from_cart([req.params.id]).then(response =>{
         return app.get('db').view_cart([userID]) 
         
+    }).then(response=>{
+                console.log(response)
+                res.status(200).send(response)
+            })
+            .catch(err => console.log(err))
+})
+
+app.delete('/api/gonecart/:id', (req, res)=>{
+    console.log('delete hit')
+    let userID = req.user.id
+    app.get('db').delete_all_cart([req.params.id]).then(response =>{
+            app.get('db').cart_count([userID]).then(response=>{
+            res.status(200).send(response)
+        })
     })
-    .then(response=>{
-        console.log(response)
-        res.status(200).send(response)
-    })
-    .catch(err => console.log(err))
 })
 
 app.get('/api/cartcount', (req, res)=>{

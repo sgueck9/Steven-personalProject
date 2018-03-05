@@ -6,6 +6,7 @@ import Home from './components/Home/Home'
 import StoreHome from './components/StoreHome/StoreHome'
 import MyCart from './components/MyCart/MyCart'
 import Checkout from './components/Checkout/Checkout';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 

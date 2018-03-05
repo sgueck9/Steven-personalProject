@@ -23,14 +23,14 @@
     text-decoration: none;
    
 }
-.header {
+/* .header {
     background-color: black;
     height: 100px;
     width: 100vw;
     z-index: 12;
     margin-top: 0px;
 
-}
+} */
 .cartThing:hover{
     /* color: hotpink; */
     -webkit-filter: hue-rotate(90deg); /* Safari */
